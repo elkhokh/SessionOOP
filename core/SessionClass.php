@@ -11,20 +11,14 @@ if (!class_exists('ClsSession')) {
 class ClsSession {
 
     
-    static function set($key , $value){
+    static function set($key , $value){ // value = null and change code like code in testcode page 
 
         $_SESSION['data'][$key] = $value;
 
         return true;
-        // in here make override on data 
-    //     $_SESSION['data']=[
-    //     'key'=>$key,
-    //     'value'=>$value,
-    // ];
-    // return true ; 
 
     }
-static public function get($key = null) {
+static public function get($key = null) { // or check if null in set and but default value 
     if ($key !== null) {
             return $_SESSION['data'][$key] ?? null;
         }
@@ -48,11 +42,13 @@ static public function get($key = null) {
     }
 
     public static function remove($key){
+        //unset($_session[$key]);
   if (isset($_SESSION['data'][$key])) {
             unset($_SESSION['data'][$key]);
             return true;
         }
         return false;
+    
     }
     public static function check($key){
         // return true of false

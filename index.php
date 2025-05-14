@@ -70,6 +70,4 @@ if (!empty($data)):
 
 <?php require_once 'view/footer.php'; ?>
 
-<!-- git remote add origin https://github.com/elkhokh/SessionOOP.git
-git branch -M master
-git push -u origin master -->
+
